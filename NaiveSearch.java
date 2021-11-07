@@ -8,7 +8,7 @@ public class NaiveSearch {
                 p2++;
                 t2++;
             }
-            if (p2 >= m) {
+            if (p2 == m) {
                 return t2 - m;
             }
             t++;
@@ -23,7 +23,6 @@ public class NaiveSearch {
         int n = target.length();
 
         // Naive search starts here
-        System.out.println(naiveSearch(pattern, target, m, n));
-        
+        System.out.println(naiveSearch(pattern, target, m, n));      
     }
 }
