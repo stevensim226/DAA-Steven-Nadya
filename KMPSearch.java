@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -57,8 +56,11 @@ public class KMPSearch {
         int[] lps_arr = new int[m];
 
         // Naive search starts here
+        long start = System.nanoTime();
         buildLPS(pattern, m, lps_arr);
-        System.out.println(Arrays.toString(lps_arr));
-        System.out.println(kmpSearch(pattern, target, m, n, lps_arr));
+        int result = kmpSearch(pattern, target, m, n, lps_arr);
+        long finish = System.nanoTime();
+        System.out.println(finish - start);
+        System.out.println(result);
     }
 }

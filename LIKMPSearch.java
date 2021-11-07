@@ -70,7 +70,11 @@ public class LIKMPSearch {
         // charTable.entrySet().forEach(entry -> {
         //     System.out.println(entry.getKey() + " -> " + entry.getValue());
         // });
-        System.out.println(likmpSearch(pattern, target, m, n, charTable));
+        long start = System.nanoTime();
+        int result = likmpSearch(pattern, target, m, n, charTable);
+        long finish = System.nanoTime();
+        System.out.println(finish - start);
+        System.out.println(result);
         
     }
 }

@@ -30,6 +30,10 @@ public class NaiveSearch {
         int n = target.length();
 
         // Naive search starts here
-        System.out.println(naiveSearch(pattern, target, m, n));      
+        long start = System.nanoTime();
+        int result = naiveSearch(pattern, target, m, n);      
+        long finish = System.nanoTime();
+        System.out.println(finish - start);
+        System.out.println(result);
     }
 }
