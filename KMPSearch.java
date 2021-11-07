@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 /**
  * Reference: Sryheni, 2020 and GeeksForGeeks, 2021
@@ -48,8 +49,9 @@ public class KMPSearch {
     }
 
     public static void main(String[] args) {
-        String pattern = "abcaby";
-        String target  = "abxabcabcaby";
+        Scanner sc = new Scanner(System.in);
+        String pattern = sc.nextLine();
+        String target  = sc.nextLine();
         int m = pattern.length();
         int n = target.length();
         int[] lps_arr = new int[m];

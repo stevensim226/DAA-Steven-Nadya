@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * Reference: Sryheni, 2020
  * Modified by Steven et al., 2021
@@ -21,8 +23,9 @@ public class NaiveSearch {
     }
 
     public static void main(String[] args) {
-        String pattern = "xxxy";
-        String target  = "xxxxxxxxxy";
+        Scanner sc = new Scanner(System.in);
+        String pattern = sc.nextLine();
+        String target  = sc.nextLine();
         int m = pattern.length();
         int n = target.length();
 
