@@ -1,3 +1,7 @@
+/**
+ * Reference: Sryheni, 2020
+ * Modified by Steven et al., 2021
+ */
 public class NaiveSearch {
     public static int naiveSearch(String pattern,String target,int m,int n) {
         int t = 0;

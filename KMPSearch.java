@@ -1,5 +1,9 @@
 import java.util.Arrays;
 
+/**
+ * Reference: Sryheni, 2020 and GeeksForGeeks, 2021
+ * Modified by Steven et al., 2021
+ */
 public class KMPSearch {
     public static void buildLPS(String pattern, int m, int[] lps_arr) {
         int a = 0;
