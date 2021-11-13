@@ -58,7 +58,7 @@ public class IKMPSearch {
         int result = ikmpSearch(pattern, target, m, n, nextval);
         long finish = System.nanoTime();
         System.out.println(finish - start);
-        System.out.println(java.util.Arrays.toString(nextval));
+        //System.out.println(java.util.Arrays.toString(nextval));
         System.out.println(result);
 
     }
