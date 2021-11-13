@@ -34,6 +34,6 @@ public class NaiveSearch {
         int result = naiveSearch(pattern, target, m, n);      
         long finish = System.nanoTime();
         System.out.println(finish - start);
-        System.out.println(result);
+        //System.out.println(result);
     }
 }

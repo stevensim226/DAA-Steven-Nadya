@@ -7,7 +7,7 @@ import java.util.Scanner;
  * Reference: Lu, X., 2019
  * Modified by Steven et al., 2021
  */
-public class LIKMPSearch {
+public class LIKMPSearchCounter {
     public static Map<Character, LinkedList<Integer>> buildCharTable(String pattern, int m) {
         Map<Character, LinkedList<Integer>> charTable = new HashMap<>();
         int ptr = m - 1;
@@ -28,7 +28,7 @@ public class LIKMPSearch {
         int t = 0;
         int jump = m;
         while (t < n) {
-            while (p < m && pattern.charAt(p) == target.charAt(t)) {
+            while (p < m && MatchingUtils.isEqual(pattern.charAt(p), target.charAt(t))) {
                 p++;
                 t++;
             }
@@ -42,7 +42,7 @@ public class LIKMPSearch {
                     if (t2 + m > n) {
                         continue; // Continue if t2 + pattern length exceeds target length
                     }
-                    while (p2 < m && pattern.charAt(p2) == target.charAt(t2)) {
+                    while (p2 < m && MatchingUtils.isEqual(pattern.charAt(p2), target.charAt(t2))) {
                         p2++;
                         t2++;
                     }
@@ -67,14 +67,11 @@ public class LIKMPSearch {
         int n = target.length();
 
         Map<Character, LinkedList<Integer>> charTable = buildCharTable(pattern, m);
-        // charTable.entrySet().forEach(entry -> {
-        //     System.out.println(entry.getKey() + " -> " + entry.getValue());
-        // });
-        long start = System.nanoTime();
+
         int result = likmpSearch(pattern, target, m, n, charTable);
-        long finish = System.nanoTime();
-        System.out.println(finish - start);
+        
         //System.out.println(result);
+        System.out.println(MatchingUtils.getCounter());
         
     }
 }
